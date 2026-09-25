@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ESTRATO · Geofísica aérea e IA</title>
+  <meta name="description" content="ESTRATO: geofísica aérea e inteligencia artificial. Magnetometría, gravimetría, radiometría, LiDAR y termografía interpretadas con modelos de IA. Explora un volcán en 3D.">
+  <meta name="theme-color" content="#16130f">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M3 27 13 9l3 4 3-4 10 18z' fill='%23c9a574'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/estrato.css">
+  <link rel="preload" href="assets/volcan.glb" as="fetch" crossorigin>
+  <script type="importmap">
+    { "imports": {
+        "three": "./vendor/three/three.module.js",
+        "three/addons/": "./vendor/three/addons/"
+    } }
+  </script>
+</head>
+<body>
+  <a class="skip" href="#explorar">Saltar al explorador</a>
+
+  <header class="nav" id="nav">
+    <a class="nav__brand" href="#inicio" aria-label="ESTRATO, inicio">
+      <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M3 27 13 9l3 4 3-4 10 18z"/><path d="M7 21h18M5 24h22" /></svg>
+      <span>ESTRATO</span>
+    </a>
+    <nav class="nav__links" aria-label="Principal">
+      <a href="#explorar">Explorar</a>
+      <a href="#tecnologia">Tecnología</a>
+      <a href="#ia">Inteligencia artificial</a>
+      <a href="#capas">Capas</a>
+      <a href="#aplicaciones">Aplicaciones</a>
+    </nav>
+    <a class="btn btn--ghost nav__cta" href="#contacto">Contacto</a>
+    <button class="nav__toggle" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span></button>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="inicio">
+    <video class="hero__video" autoplay muted loop playsinline preload="auto" poster="assets/intro-poster.jpg">
+      <source src="assets/intro.webm" type="video/webm">
+      <source src="assets/intro.mp4" type="video/mp4">
+    </video>
+    <div class="hero__shade"></div>
+    <div class="hero__content">
+      <p class="eyebrow reveal">Geofísica aérea · Inteligencia artificial</p>
+      <h1 class="hero__title" aria-label="ESTRATO">
+        <span>E</span><span>S</span><span>T</span><span>R</span><span>A</span><span>T</span><span>O</span>
+      </h1>
+      <p class="hero__lead reveal">Leemos la Tierra desde el aire. Sensores aerotransportados y modelos de IA que revelan lo que ocurre bajo la superficie de volcanes, montañas y cuencas.</p>
+      <div class="hero__actions reveal">
+        <a class="btn btn--solid" href="#explorar">Explorar el volcán</a>
+        <a class="btn btn--ghost" href="#tecnologia">Nuestra tecnología</a>
+      </div>
+    </div>
+    <div class="hero__meta">
+      <span>Levantamientos aéreos · Volcanes activos</span>
+      <span class="hero__scroll">Desliza<i></i></span>
+      <span>Altitud de vuelo 120 m AGL</span>
+    </div>
+  </section>
+
+  <!-- MANIFIESTO -->
+  <section class="intro" id="manifiesto">
+    <div class="wrap intro__grid">
+      <p class="eyebrow reveal">01 — Manifiesto</p>
+      <h2 class="display reveal">Cada volcán guarda <em>capas de historia</em>. Nosotros las medimos, las modelamos y las convertimos en decisiones.</h2>
+      <div class="intro__cols">
+        <p class="reveal">ESTRATO combina levantamientos geofísicos aéreos —con drones y aeronaves tripuladas— con modelos de aprendizaje automático entrenados para detectar anomalías magnéticas, térmicas y estructurales que el ojo humano pasa por alto.</p>
+        <p class="reveal">El resultado no es solo un mapa: es un modelo vivo del subsuelo, navegable en 3D, que se actualiza con cada vuelo y ayuda a equipos de monitoreo, exploración y gestión de riesgo a actuar antes.</p>
+      </div>
+      <ul class="facts reveal" aria-label="Capacidades">
+        <li><strong>5</strong><span>tipos de sensores aerotransportados integrados</span></li>
+        <li><strong>3D</strong><span>modelos del subsuelo navegables en el navegador</span></li>
+        <li><strong>IA</strong><span>detección automática de anomalías por capa</span></li>
+        <li><strong>24/7</strong><span>monitoreo continuo con vuelos programados</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- EXPLORADOR 3D -->
+  <section class="explorer" id="explorar" aria-label="Explorador 3D del volcán">
+    <div class="explorer__stage" id="stage">
+      <canvas id="volcan" aria-label="Modelo 3D interactivo de un volcán"></canvas>
+      <img class="explorer__fallback" src="assets/volcan-poster.jpg" alt="Vista del modelo 3D del volcán con relieve en tonos tierra" hidden>
+      <div class="explorer__labels" id="labels" aria-hidden="false"></div>
+    </div>
+
+    <div class="explorer__intro" id="explorerIntro">
+      <p class="eyebrow">02 — Explorador</p>
+      <h2 class="display">Vuela sobre el volcán</h2>
+      <p>Un modelo 3D con datos geofísicos simulados. Cambia de capa, sigue el vuelo de levantamiento y deja que la IA marque dónde mirar.</p>
+      <button class="btn btn--solid" id="enterBtn">Entrar al volcán</button>
+      <button class="btn btn--ghost" id="tourBtn">Recorrido guiado</button>
+      <p class="hint">Arrastra para orbitar · rueda o pellizco para acercar · doble clic para volar a un punto</p>
+    </div>
+
+    <div class="hud" id="hud" aria-hidden="true">
+      <div class="hud__top">
+        <div class="hud__title">
+          <span class="hud__brand">ESTRATO / VOLCÁN E-1</span>
+          <span class="hud__sub">Modelo sintético · 10 × 10 km</span>
+        </div>
+        <button class="hud__exit" id="exitBtn" aria-label="Salir del explorador">Salir <kbd>Esc</kbd></button>
+      </div>
+
+      <div class="layers" role="radiogroup" aria-label="Capa de datos">
+        <button role="radio" aria-checked="true" data-layer="0"><i style="--c:#8a6f55"></i>Relieve</button>
+        <button role="radio" aria-checked="false" data-layer="1"><i style="--c:#e9dfcf"></i>Topografía</button>
+        <button role="radio" aria-checked="false" data-layer="2"><i style="--c:linear-gradient(90deg,#2f4a55,#e9dfcf,#9b3b22)"></i>Magnetometría</button>
+        <button role="radio" aria-checked="false" data-layer="3"><i style="--c:linear-gradient(90deg,#1a0e0a,#8f2a12,#e0772a,#f6e2a6)"></i>Térmico</button>
+        <button role="radio" aria-checked="false" data-layer="4"><i style="--c:#d6a24a"></i>IA · anomalías</button>
+      </div>
+
+      <div class="tools">
+        <label class="switch"><input type="checkbox" id="optSurvey" checked><span></span>Líneas de vuelo</label>
+        <label class="switch"><input type="checkbox" id="optDrone" checked><span></span>Dron de levantamiento</label>
+        <label class="switch"><input type="checkbox" id="optSmoke" checked><span></span>Fumarola</label>
+        <label class="switch"><input type="checkbox" id="optRotate"><span></span>Rotación automática</label>
+        <button class="btn btn--ghost btn--sm" id="tourBtn2">Recorrido guiado</button>
+        <button class="btn btn--ghost btn--sm" id="resetBtn">Vista inicial</button>
+      </div>
+
+      <div class="legend" id="legend">
+        <span class="legend__name">Relieve</span>
+        <span class="legend__bar"></span>
+        <span class="legend__range"><em>1 200 m</em><em>5 100 m</em></span>
+      </div>
+
+      <div class="readout" id="readout">
+        <div><span>E</span><b id="rE">—</b></div>
+        <div><span>N</span><b id="rN">—</b></div>
+        <div><span>Elev.</span><b id="rZ">—</b></div>
+        <div><span id="rLabel">Pendiente</span><b id="rV">—</b></div>
+      </div>
+
+      <aside class="panel" id="panel" aria-live="polite" hidden>
+        <button class="panel__close" id="panelClose" aria-label="Cerrar">×</button>
+        <p class="panel__kicker" id="panelKicker"></p>
+        <h3 id="panelTitle"></h3>
+        <p id="panelText"></p>
+        <dl id="panelData"></dl>
+      </aside>
+
+      <div class="caption" id="caption" aria-live="polite"></div>
+    </div>
+  </section>
+
+  <!-- TECNOLOGÍA -->
+  <section class="tech" id="tecnologia">
+    <div class="wrap">
+      <header class="section-head">
+        <p class="eyebrow reveal">03 — Tecnología</p>
+        <h2 class="display reveal">Sensores que ven <em>a través</em> de la roca</h2>
+        <p class="reveal">Cada método responde a una propiedad física distinta del subsuelo. Volamos varios a la vez y los fusionamos en un solo modelo.</p>
+      </header>
+      <div class="cards">
+        <article class="card reveal">
+          <svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="6"/><path d="M24 4c11 0 20 9 20 20M24 44C13 44 4 35 4 24M10 10c4-4 9-6 14-6M38 38c-4 4-9 6-14 6"/></svg>
+          <h3>Magnetometría aérea</h3>
+          <p>Mide variaciones del campo magnético terrestre para mapear conductos magmáticos, fallas y cuerpos mineralizados.</p>
+          <span class="card__tag">Campo total · gradiente</span>
+        </article>
+        <article class="card reveal">
+          <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 6v28"/><path d="m16 26 8 8 8-8"/><path d="M8 42h32"/><circle cx="24" cy="6" r="2"/></svg>
+          <h3>Gravimetría aerotransportada</h3>
+          <p>Detecta contrastes de densidad: cámaras magmáticas, cuencas sedimentarias y estructuras profundas.</p>
+          <span class="card__tag">Anomalía de Bouguer</span>
+        </article>
+        <article class="card reveal">
+          <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 24 10 10M24 24l14-14M24 24v18"/><circle cx="24" cy="24" r="3"/><path d="M6 20a18 18 0 0 1 36 0"/></svg>
+          <h3>Espectrometría gamma</h3>
+          <p>Cuantifica potasio, uranio y torio en superficie para cartografiar alteración hidrotermal y litologías.</p>
+          <span class="card__tag">K · eU · eTh</span>
+        </article>
+        <article class="card reveal">
+          <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M4 38 16 22l8 8 8-14 12 22z"/><path d="M24 4v10M18 8l6 6 6-6"/></svg>
+          <h3>LiDAR y fotogrametría</h3>
+          <p>Modelos digitales de elevación centimétricos, incluso bajo vegetación, para medir deformación y erosión.</p>
+          <span class="card__tag">MDE · nube de puntos</span>
+        </article>
+        <article class="card reveal">
+          <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M20 30V8a4 4 0 0 1 8 0v22a8 8 0 1 1-8 0z"/><path d="M24 18v16"/></svg>
+          <h3>Termografía infrarroja</h3>
+          <p>Mapas térmicos de fumarolas, grietas y flujos de lava para seguir la actividad volcánica en tiempo casi real.</p>
+          <span class="card__tag">LWIR · radiancia</span>
+        </article>
+        <article class="card reveal">
+          <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M6 14h36M6 24h36M6 34h36"/><path d="M14 8v32M34 8v32" stroke-dasharray="3 3"/></svg>
+          <h3>Electromagnetismo aéreo</h3>
+          <p>Resistividad del subsuelo en profundidad para localizar acuíferos, arcillas de alteración y fluidos.</p>
+          <span class="card__tag">AEM · dominio del tiempo</span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- IA -->
+  <section class="ai" id="ia">
+    <video class="ai__video" autoplay muted loop playsinline preload="metadata" poster="assets/topografia-poster.jpg">
+      <source src="assets/topografia.webm" type="video/webm">
+    </video>
+    <div class="ai__shade"></div>
+    <div class="wrap ai__inner">
+      <header class="section-head section-head--light">
+        <p class="eyebrow reveal">04 — Inteligencia artificial</p>
+        <h2 class="display reveal">De millones de lecturas a <em>una sola respuesta</em></h2>
+        <p class="reveal">Nuestros modelos aprenden la firma de cada fenómeno y la buscan en todas las capas a la vez.</p>
+      </header>
+      <ol class="pipeline">
+        <li class="reveal">
+          <span class="pipeline__n">01</span>
+          <h3>Adquisición</h3>
+          <p>Vuelos en rejilla con sensores sincronizados por GNSS/RTK. Cada línea registra miles de muestras por segundo.</p>
+        </li>
+        <li class="reveal">
+          <span class="pipeline__n">02</span>
+          <h3>Procesamiento</h3>
+          <p>Corrección diurna, nivelación de líneas, filtrado de ruido y fusión de sensores en una malla común.</p>
+        </li>
+        <li class="reveal">
+          <span class="pipeline__n">03</span>
+          <h3>Modelado con IA</h3>
+          <p>Redes neuronales para inversión 3D, segmentación de estructuras y detección de anomalías con incertidumbre cuantificada.</p>
+        </li>
+        <li class="reveal">
+          <span class="pipeline__n">04</span>
+          <h3>Interpretación</h3>
+          <p>Geocientíficos validan cada hallazgo. Entregamos visores 3D, informes y alertas integrables en tus sistemas.</p>
+        </li>
+      </ol>
+      <div class="scan reveal" aria-label="Ejemplo de detección">
+        <div class="scan__grid" id="scanGrid"></div>
+        <div class="scan__info">
+          <p class="eyebrow">Detección en vivo</p>
+          <p class="scan__big"><span id="scanPct">0</span>%</p>
+          <p>de la malla analizada. Las celdas resaltadas superan el umbral de probabilidad de anomalía (p &gt; 0.8).</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CAPAS -->
+  <section class="strata" id="capas">
+    <div class="wrap strata__grid">
+      <header class="section-head">
+        <p class="eyebrow reveal">05 — Capas</p>
+        <h2 class="display reveal">Un corte a través del <em>estrato</em></h2>
+        <p class="reveal">Pasa el cursor —o toca— cada capa para ver qué sensor la revela.</p>
+      </header>
+      <div class="section-cut" id="cut">
+        <button class="stratum" style="--h:14%;--c:#b9a488" data-sensor="LiDAR · Fotogrametría" data-depth="0 – 5 m">
+          <span>Superficie y ceniza reciente</span>
+        </button>
+        <button class="stratum" style="--h:18%;--c:#8f7458" data-sensor="Espectrometría gamma · Termografía" data-depth="5 – 60 m">
+          <span>Depósitos piroclásticos</span>
+        </button>
+        <button class="stratum" style="--h:22%;--c:#6b5240" data-sensor="Electromagnetismo aéreo" data-depth="60 – 400 m">
+          <span>Coladas de lava andesítica</span>
+        </button>
+        <button class="stratum" style="--h:20%;--c:#4a3a30" data-sensor="Magnetometría" data-depth="0.4 – 2 km">
+          <span>Sistema hidrotermal</span>
+        </button>
+        <button class="stratum stratum--magma" style="--h:26%;--c:#6e2a16" data-sensor="Gravimetría · Inversión con IA" data-depth="2 – 8 km">
+          <span>Cámara magmática</span>
+        </button>
+        <div class="cut__readout" id="cutReadout">
+          <span class="eyebrow">Sensor</span>
+          <b>Selecciona una capa</b>
+          <em></em>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- APLICACIONES -->
+  <section class="apps" id="aplicaciones">
+    <div class="wrap">
+      <header class="section-head">
+        <p class="eyebrow reveal">06 — Aplicaciones</p>
+        <h2 class="display reveal">Donde el subsuelo <em>importa</em></h2>
+      </header>
+      <div class="apps__list">
+        <a class="app reveal" href="#contacto"><span>01</span><h3>Monitoreo volcánico</h3><p>Deformación, desgasificación y calor, comparados vuelo a vuelo.</p></a>
+        <a class="app reveal" href="#contacto"><span>02</span><h3>Exploración minera</h3><p>Objetivos priorizados por IA antes de perforar un solo metro.</p></a>
+        <a class="app reveal" href="#contacto"><span>03</span><h3>Hidrogeología</h3><p>Acuíferos y zonas de recarga mapeadas con resistividad aérea.</p></a>
+        <a class="app reveal" href="#contacto"><span>04</span><h3>Riesgo geológico</h3><p>Laderas inestables y lahares modelados para planes de respuesta.</p></a>
+        <a class="app reveal" href="#contacto"><span>05</span><h3>Geotermia</h3><p>Sistemas hidrotermales caracterizados para energía limpia.</p></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section class="contact" id="contacto">
+    <div class="wrap contact__grid">
+      <div>
+        <p class="eyebrow reveal">07 — Contacto</p>
+        <h2 class="display reveal">Planifiquemos tu <em>próximo vuelo</em></h2>
+        <p class="reveal">Cuéntanos el área, el objetivo y los plazos. Te respondemos con una propuesta de levantamiento y los sensores adecuados.</p>
+      </div>
+      <form class="form reveal" id="contactForm">
+        <label>Nombre<input name="nombre" required autocomplete="name"></label>
+        <label>Correo<input name="correo" type="email" required autocomplete="email"></label>
+        <label>Tipo de proyecto
+          <select name="proyecto">
+            <option>Monitoreo volcánico</option>
+            <option>Exploración minera</option>
+            <option>Hidrogeología</option>
+            <option>Riesgo geológico</option>
+            <option>Geotermia</option>
+            <option>Otro</option>
+          </select>
+        </label>
+        <label>Mensaje<textarea name="mensaje" rows="4"></textarea></label>
+        <button class="btn btn--solid" type="submit">Enviar solicitud</button>
+        <p class="form__note" id="formNote" role="status"></p>
+      </form>
+    </div>
+    <footer class="footer wrap">
+      <span class="footer__brand">ESTRATO</span>
+      <span>Geofísica aérea e inteligencia artificial</span>
+      <span>© <span id="year">2026</span></span>
+    </footer>
+  </section>
+
+  <script type="module" src="js/main.js"></script>
+  <script type="module" src="js/explorer.js"></script>
+</body>
+</html>

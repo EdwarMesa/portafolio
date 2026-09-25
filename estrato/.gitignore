@@ -1,0 +1,3 @@
+# Se regenera con: blender -b --factory-startup --python blender/build_volcano.py -- --out assets
+blender/*.blend
+blender/*.blend1
