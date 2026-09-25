@@ -36,12 +36,31 @@ document.querySelectorAll('.reveal').forEach((el, i) => {
   io.observe(el);
 });
 
-// Pausar videos fuera de pantalla
+// Videos de fondo: reproducción continua mientras están en pantalla.
+// Se pausan fuera de pantalla para ahorrar batería y se reanudan si el
+// navegador los detiene (buffer, pestaña oculta o autoplay bloqueado).
 document.querySelectorAll('video').forEach((v) => {
+  v.muted = true;
+  v.defaultMuted = true;
+  v.playsInline = true;
+  v.loop = true;
+  let onScreen = false;
+  const play = () => {
+    if (onScreen && !document.hidden && v.paused) v.play().catch(() => {});
+  };
   new IntersectionObserver(([e]) => {
-    if (e.isIntersecting && !reduced) v.play().catch(() => {});
+    onScreen = e.isIntersecting;
+    if (onScreen) play();
     else v.pause();
-  }).observe(v);
+  }, { threshold: 0.05 }).observe(v);
+  v.addEventListener('pause', () => setTimeout(play, 250));
+  v.addEventListener('stalled', play);
+  v.addEventListener('waiting', () => setTimeout(play, 500));
+  v.addEventListener('ended', () => { v.currentTime = 0; play(); });
+  document.addEventListener('visibilitychange', play);
+  // Si el navegador bloqueó el autoplay, arranca con la primera interacción
+  ['pointerdown', 'touchstart', 'keydown', 'scroll'].forEach((ev) =>
+    addEventListener(ev, play, { once: true, passive: true }));
 });
 
 // Detección IA: rejilla que se analiza por barrido
