@@ -3,11 +3,19 @@
 App de personalización para descargar y aplicar fondos de pantalla. La idea es simple: pocas
 pantallas, cero distracciones, y que el color lo pongan los fondos.
 
+> **v2 (ciclo 1 de mejora continua):** nueva experiencia inmersiva en `web/`, catálogo v2 con
+> 9 categorías y capas de profundidad, estructura de backend y comercio en `backend/`, y
+> documentación en `docs/` ([producto](docs/PRODUCTO.md), [arquitectura](docs/ARQUITECTURA.md),
+> [registro de mejoras](docs/MEJORAS.md)). La app Android sigue en v1 y usa el catálogo v1.
+
 | Carpeta | Qué contiene |
 |---|---|
+| `web/` | **v2**: experiencia web inmersiva (portada, colecciones, detalle con simulador, compra honesta, perfil) y sus pruebas |
+| `backend/` | **v2**: esquema Supabase con RLS validado y funciones de descarga firmada y verificación de compras |
+| `docs/` | **v2**: producto, arquitectura y registro de mejoras |
 | `android/` | App nativa: Kotlin + Jetpack Compose + Material 3 |
 | `prototipo/` | Prototipo web interactivo del diseño, con el mismo catálogo que la app |
-| `catalogo/` | `catalogo.json` + 18 fondos originales (1080×2400 WebP) y sus miniaturas |
+| `catalogo/` | v1: `catalogo.json` + 18 fondos (lo usa la app Android). `v2/`: 38 fondos, vistas, capas y metadatos de demo |
 | `herramientas/` | Scripts que generan los fondos y los gráficos de Play Store |
 | `play-store/` | Icono 512, gráfico destacado y capturas listos para subir |
 | `privacidad.html` | Política de privacidad (Play la exige) |
@@ -41,7 +49,16 @@ La navegación es una píldora flotante con dos secciones. Hay tema claro y oscu
 
 Radios: tarjetas 20 dp, hoja y barra 28 dp, chips y botones en píldora. Iconos de trazo de 1,8.
 
-## Ver el prototipo
+## Ver la web v2
+
+```sh
+python3 -m http.server 8000      # desde la raíz del repositorio
+# abre http://localhost:8000/muro/web/
+```
+
+Pruebas: `cd muro/web/pruebas && npm install && npm test`.
+
+## Ver el prototipo v1
 
 ```sh
 python3 -m http.server 8000      # desde la raíz del repositorio
