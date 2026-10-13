@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Muro</string>
+    <string name="explorar">Explorar</string>
+    <string name="favoritos">Favoritos</string>
+    <string name="todos">Todos</string>
+    <string name="sin_favoritos">Aún no tienes favoritos.\nToca el corazón en cualquier fondo.</string>
+    <string name="error_catalogo">No se pudo cargar el catálogo.\nRevisa tu conexión.</string>
+    <string name="reintentar">Reintentar</string>
+    <string name="volver">Volver</string>
+    <string name="vista_bloqueo">Vista previa de bloqueo</string>
+    <string name="favorito">Favorito</string>
+    <string name="descargar">Descargar</string>
+    <string name="aplicar">Aplicar</string>
+    <string name="aplicar_en">Aplicar en</string>
+    <string name="destino_inicio">Pantalla de inicio</string>
+    <string name="destino_bloqueo">Pantalla de bloqueo</string>
+    <string name="destino_ambas">Ambas</string>
+    <string name="aplicado">Fondo aplicado</string>
+    <string name="descargado">Guardado en Imágenes/Muro</string>
+    <string name="error_accion">Algo salió mal. Inténtalo de nuevo.</string>
+    <string name="acerca">Acerca de</string>
+    <string name="acerca_texto">Fondos minimalistas y originales.\nSin cuenta, sin anuncios y sin rastreo.</string>
+    <string name="privacidad">Política de privacidad</string>
+    <string name="cerrar">Cerrar</string>
+</resources>

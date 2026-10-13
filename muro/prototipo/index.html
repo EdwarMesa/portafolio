@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Muro — Prototipo</title>
+<meta name="description" content="Prototipo interactivo de Muro, app minimalista de fondos de pantalla para Android.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="prototipo.css">
+</head>
+<body>
+<div class="escenario">
+  <aside class="nota">
+    <p class="nota__marca">Muro</p>
+    <h1>Fondos minimalistas para Android</h1>
+    <p>Prototipo interactivo de la app. Toca un fondo para verlo a pantalla completa, guárdalo en favoritos, descárgalo o simula aplicarlo.</p>
+    <ul>
+      <li>Kotlin + Jetpack Compose · Material 3</li>
+      <li>Sin cuenta, sin anuncios, sin rastreo</li>
+      <li>Catálogo remoto en JSON, fondos originales</li>
+    </ul>
+  </aside>
+
+  <div class="movil" id="app" data-pantalla="explorar">
+    <!-- Explorar / Favoritos -->
+    <section class="pantalla pantalla--lista">
+      <header class="barra">
+        <h2 class="barra__titulo" id="titulo">Muro</h2>
+        <button class="icono" id="btn-tema" aria-label="Cambiar tema">
+          <svg viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 0 9 9 7 7 0 0 1-9-9z"/></svg>
+        </button>
+      </header>
+      <nav class="chips" id="chips" aria-label="Categorías"></nav>
+      <div class="rejilla" id="rejilla" aria-live="polite"></div>
+      <p class="vacio" id="vacio" hidden>Aún no tienes favoritos.<br>Toca el corazón en cualquier fondo.</p>
+
+      <nav class="navegacion" aria-label="Secciones">
+        <button class="navegacion__item activo" data-ir="explorar">
+          <svg viewBox="0 0 24 24"><rect x="4" y="4" width="7" height="9" rx="2"/><rect x="13" y="4" width="7" height="5" rx="2"/><rect x="4" y="15" width="7" height="5" rx="2"/><rect x="13" y="11" width="7" height="9" rx="2"/></svg>
+          <span>Explorar</span>
+        </button>
+        <button class="navegacion__item" data-ir="favoritos">
+          <svg viewBox="0 0 24 24"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></svg>
+          <span>Favoritos</span>
+        </button>
+      </nav>
+    </section>
+
+    <!-- Detalle -->
+    <section class="pantalla pantalla--detalle" aria-hidden="true">
+      <img class="detalle__img" id="detalle-img" alt="">
+      <div class="reloj" id="reloj" aria-hidden="true">
+        <span class="reloj__fecha" id="reloj-fecha"></span>
+        <span class="reloj__hora" id="reloj-hora"></span>
+      </div>
+      <header class="detalle__barra">
+        <button class="icono icono--vidrio" id="btn-volver" aria-label="Volver">
+          <svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg>
+        </button>
+        <button class="icono icono--vidrio" id="btn-vista" aria-label="Vista previa de bloqueo">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M12 8v4l3 2"/></svg>
+        </button>
+      </header>
+      <footer class="detalle__pie">
+        <div class="detalle__info">
+          <strong id="detalle-nombre"></strong>
+          <span id="detalle-cat"></span>
+        </div>
+        <div class="detalle__acciones">
+          <button class="icono icono--vidrio" id="btn-fav" aria-label="Favorito" aria-pressed="false">
+            <svg viewBox="0 0 24 24"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></svg>
+          </button>
+          <a class="icono icono--vidrio" id="btn-descargar" aria-label="Descargar" download>
+            <svg viewBox="0 0 24 24"><path d="M12 4v11m-5-5 5 5 5-5M5 20h14"/></svg>
+          </a>
+          <button class="boton" id="btn-aplicar">Aplicar</button>
+        </div>
+      </footer>
+
+      <div class="hoja" id="hoja" hidden>
+        <div class="hoja__fondo" data-cerrar></div>
+        <div class="hoja__panel" role="dialog" aria-label="Aplicar fondo">
+          <span class="hoja__asa"></span>
+          <p class="hoja__titulo">Aplicar en</p>
+          <button class="hoja__opcion" data-destino="Pantalla de inicio">
+            <svg viewBox="0 0 24 24"><path d="M4 11l8-7 8 7v9h-5v-6H9v6H4z"/></svg>Pantalla de inicio</button>
+          <button class="hoja__opcion" data-destino="Pantalla de bloqueo">
+            <svg viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>Pantalla de bloqueo</button>
+          <button class="hoja__opcion" data-destino="Ambas pantallas">
+            <svg viewBox="0 0 24 24"><rect x="6" y="3" width="12" height="18" rx="3"/><path d="M10 18h4"/></svg>Ambas</button>
+        </div>
+      </div>
+    </section>
+
+    <div class="aviso" id="aviso" role="status"></div>
+  </div>
+</div>
+<script src="prototipo.js"></script>
+</body>
+</html>

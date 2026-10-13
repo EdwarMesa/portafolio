@@ -1,0 +1,210 @@
+{
+  "version": 1,
+  "categorias": [
+    "Degradados",
+    "Formas",
+    "Ondas",
+    "Noche",
+    "Tierra"
+  ],
+  "fondos": [
+    {
+      "id": "aurora",
+      "nombre": "Aurora",
+      "categoria": "Degradados",
+      "color": "#1d2b64",
+      "imagen": "fondos/aurora.webp",
+      "miniatura": "miniaturas/aurora.webp",
+      "ancho": 1080,
+      "alto": 2400,
+      "autor": "Muro"
+    },
+    {
+      "id": "melocoton",
+      "nombre": "Melocotón",
+      "categoria": "Degradados",
+      "color": "#ffd3a5",
+      "imagen": "fondos/melocoton.webp",
+      "miniatura": "miniaturas/melocoton.webp",
+      "ancho": 1080,
+      "alto": 2400,
+      "autor": "Muro"
+    },
+    {
+      "id": "menta",
+      "nombre": "Menta",
+      "categoria": "Degradados",
+      "color": "#d4fc79",
+      "imagen": "fondos/menta.webp",
+      "miniatura": "miniaturas/menta.webp",
+      "ancho": 1080,
+      "alto": 2400,
+      "autor": "Muro"
+    },
+    {
+      "id": "brasa",
+      "nombre": "Brasa",
+      "categoria": "Formas",
+      "color": "#f3e9dc",
+      "imagen": "fondos/brasa.webp",
+      "miniatura": "miniaturas/brasa.webp",
+      "ancho": 1080,
+      "alto": 2400,
+      "autor": "Muro"
+    },
+    {
+      "id": "limon",
+      "nombre": "Limón",
+      "categoria": "Formas",
+      "color": "#e9f0e6",
+      "imagen": "fondos/limon.webp",
+      "miniatura": "miniaturas/limon.webp",
+      "ancho": 1080,
+      "alto": 2400,
+      "autor": "Muro"
+    },
+    {
+      "id": "lavanda",
+      "nombre": "Lavanda",
+      "categoria": "Formas",
+      "color": "#ece6f5",
+      "imagen": "fondos/lavanda.webp",
+      "miniatura": "miniaturas/lavanda.webp",
+      "ancho": 1080,
+      "alto": 2400,
+      "autor": "Muro"
+    },
+    {
+      "id": "marea",
+      "nombre": "Marea",
+      "categoria": "Ondas",
+      "color": "#e8f1f2",
+      "imagen": "fondos/marea.webp",
+      "miniatura": "miniaturas/marea.webp",
+      "ancho": 1080,
+      "alto": 2400,
+      "autor": "Muro"
+    },
+    {
+      "id": "coral",
+      "nombre": "Coral",
+      "categoria": "Ondas",
+      "color": "#fff4ec",
+      "imagen": "fondos/coral.webp",
+      "miniatura": "miniaturas/coral.webp",
+      "ancho": 1080,
+      "alto": 2400,
+      "autor": "Muro"
+    },
+    {
+      "id": "bosque",
+      "nombre": "Bosque",
+      "categoria": "Ondas",
+      "color": "#f1f4ea",
+      "imagen": "fondos/bosque.webp",
+      "miniatura": "miniaturas/bosque.webp",
+      "ancho": 1080,
+      "alto": 2400,
+      "autor": "Muro"
+    },
+    {
+      "id": "vigilia",
+      "nombre": "Vigilia",
+      "categoria": "Noche",
+      "color": "#0b0c1a",
+      "imagen": "fondos/vigilia.webp",
+      "miniatura": "miniaturas/vigilia.webp",
+      "ancho": 1080,
+      "alto": 2400,
+      "autor": "Muro"
+    },
+    {
+      "id": "abismo",
+      "nombre": "Abismo",
+      "categoria": "Noche",
+      "color": "#020b13",
+      "imagen": "fondos/abismo.webp",
+      "miniatura": "miniaturas/abismo.webp",
+      "ancho": 1080,
+      "alto": 2400,
+      "autor": "Muro"
+    },
+    {
+      "id": "ciruela",
+      "nombre": "Ciruela",
+      "categoria": "Noche",
+      "color": "#140816",
+      "imagen": "fondos/ciruela.webp",
+      "miniatura": "miniaturas/ciruela.webp",
+      "ancho": 1080,
+      "alto": 2400,
+      "autor": "Muro"
+    },
+    {
+      "id": "sahara",
+      "nombre": "Sahara",
+      "categoria": "Tierra",
+      "color": "#f6e7d0",
+      "imagen": "fondos/sahara.webp",
+      "miniatura": "miniaturas/sahara.webp",
+      "ancho": 1080,
+      "alto": 2400,
+      "autor": "Muro"
+    },
+    {
+      "id": "arcilla",
+      "nombre": "Arcilla",
+      "categoria": "Tierra",
+      "color": "#efe3d6",
+      "imagen": "fondos/arcilla.webp",
+      "miniatura": "miniaturas/arcilla.webp",
+      "ancho": 1080,
+      "alto": 2400,
+      "autor": "Muro"
+    },
+    {
+      "id": "salvia",
+      "nombre": "Salvia",
+      "categoria": "Tierra",
+      "color": "#eef0e5",
+      "imagen": "fondos/salvia.webp",
+      "miniatura": "miniaturas/salvia.webp",
+      "ancho": 1080,
+      "alto": 2400,
+      "autor": "Muro"
+    },
+    {
+      "id": "bauhaus",
+      "nombre": "Bauhaus",
+      "categoria": "Formas",
+      "color": "#f2ede4",
+      "imagen": "fondos/bauhaus.webp",
+      "miniatura": "miniaturas/bauhaus.webp",
+      "ancho": 1080,
+      "alto": 2400,
+      "autor": "Muro"
+    },
+    {
+      "id": "terracota",
+      "nombre": "Terracota",
+      "categoria": "Tierra",
+      "color": "#f7efe5",
+      "imagen": "fondos/terracota.webp",
+      "miniatura": "miniaturas/terracota.webp",
+      "ancho": 1080,
+      "alto": 2400,
+      "autor": "Muro"
+    },
+    {
+      "id": "grafito",
+      "nombre": "Grafito",
+      "categoria": "Noche",
+      "color": "#111111",
+      "imagen": "fondos/grafito.webp",
+      "miniatura": "miniaturas/grafito.webp",
+      "ancho": 1080,
+      "alto": 2400,
+      "autor": "Muro"
+    }
+  ]
+}

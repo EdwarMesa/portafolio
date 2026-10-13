@@ -1,0 +1,1284 @@
+{
+ "version": 2,
+ "demo": true,
+ "aviso": "Datos de demostración: precios, colecciones y fechas no son reales.",
+ "categorias": [
+  {
+   "id": "cyberpunk",
+   "nombre": "Cyberpunk",
+   "acento": "#ff2bd6",
+   "tema": "neon"
+  },
+  {
+   "id": "espacio",
+   "nombre": "Espacio",
+   "acento": "#8fa8ff",
+   "tema": "orbital"
+  },
+  {
+   "id": "naturaleza",
+   "nombre": "Naturaleza",
+   "acento": "#7fd1a0",
+   "tema": "organico"
+  },
+  {
+   "id": "cinematico",
+   "nombre": "Paisajes cinematográficos",
+   "acento": "#ffb26b",
+   "tema": "panoramico"
+  },
+  {
+   "id": "arquitectura",
+   "nombre": "Arquitectura",
+   "acento": "#e3d5bf",
+   "tema": "perspectiva"
+  },
+  {
+   "id": "lujo",
+   "nombre": "Lujo",
+   "acento": "#d8b26e",
+   "tema": "contenido"
+  },
+  {
+   "id": "abstracto",
+   "nombre": "Arte abstracto",
+   "acento": "#ff7a59",
+   "tema": "fluido"
+  },
+  {
+   "id": "oscuro",
+   "nombre": "Oscuro y minimalista",
+   "acento": "#c8ccff",
+   "tema": "contenido"
+  },
+  {
+   "id": "minimal",
+   "nombre": "Minimalismo",
+   "acento": "#e9e3d6",
+   "tema": "contenido"
+  }
+ ],
+ "colecciones": [
+  {
+   "id": "bienvenida",
+   "nombre": "Bienvenida",
+   "descripcion": "Seis fondos gratuitos para empezar.",
+   "tipo": "gratis",
+   "precio": 0
+  },
+  {
+   "id": "neon-nocturno",
+   "nombre": "Neón Nocturno",
+   "descripcion": "La ciudad que no duerme, en tres capas de luz.",
+   "tipo": "pack",
+   "precio": 4.99
+  },
+  {
+   "id": "orbitas",
+   "nombre": "Órbitas",
+   "descripcion": "Planetas, anillos y nebulosas.",
+   "tipo": "pack",
+   "precio": 3.99
+  },
+  {
+   "id": "cumbres",
+   "nombre": "Cumbres",
+   "descripcion": "Crestas, niebla y luz de montaña.",
+   "tipo": "pack",
+   "precio": 2.99
+  },
+  {
+   "id": "horizontes",
+   "nombre": "Horizontes",
+   "descripcion": "Paisajes en formato de cine.",
+   "tipo": "pack",
+   "precio": 3.99
+  },
+  {
+   "id": "geometria",
+   "nombre": "Geometría",
+   "descripcion": "Arcos, simetría y perspectiva.",
+   "tipo": "pack",
+   "precio": 3.99
+  },
+  {
+   "id": "oro-negro",
+   "nombre": "Oro Negro",
+   "descripcion": "Lujo silencioso en negro y oro.",
+   "tipo": "exclusiva",
+   "precio": 5.99
+  },
+  {
+   "id": "lanzamiento-noviembre",
+   "nombre": "Lanzamiento de noviembre",
+   "descripcion": "Disponible el 1 de noviembre.",
+   "tipo": "lanzamiento",
+   "precio": 3.49
+  }
+ ],
+ "suscripcion": {
+  "id": "muro_plus_mensual",
+  "nombre": "Muro+",
+  "precio": 2.99,
+  "moneda": "USD",
+  "periodo": "mes",
+  "beneficios": [
+   "Todos los fondos marcados como Muro+",
+   "Acceso anticipado a lanzamientos",
+   "Descargas en resolución original"
+  ]
+ },
+ "fondos": [
+  {
+   "id": "neon-sur",
+   "nombre": "Neón Sur",
+   "descripcion": "Un sol sintético se hunde tras la ciudad. Tres capas de profundidad.",
+   "categoria": "cyberpunk",
+   "coleccion": "neon-nocturno",
+   "etiquetas": [
+    "neón",
+    "ciudad",
+    "synthwave"
+   ],
+   "acceso": "premium",
+   "precio": 1.99,
+   "moneda": "USD",
+   "publicado": "2026-10-10",
+   "destacado": true,
+   "autor": "Estudio Muro",
+   "licencia": "Uso personal en un dispositivo",
+   "resolucion": [
+    1080,
+    2400
+   ],
+   "formato": "webp",
+   "color": "#351b3d",
+   "vista": "vistas/neon-sur.webp",
+   "miniatura": "miniaturas/neon-sur.webp",
+   "original": null,
+   "capas": [
+    "capas/neon-sur-0.webp",
+    "capas/neon-sur-1.webp",
+    "capas/neon-sur-2.webp"
+   ]
+  },
+  {
+   "id": "distrito-9",
+   "nombre": "Distrito 9",
+   "descripcion": "",
+   "categoria": "cyberpunk",
+   "coleccion": "neon-nocturno",
+   "etiquetas": [
+    "neón",
+    "ciudad",
+    "azul"
+   ],
+   "acceso": "premium",
+   "precio": 1.99,
+   "moneda": "USD",
+   "publicado": "2026-10-08",
+   "destacado": false,
+   "autor": "Estudio Muro",
+   "licencia": "Uso personal en un dispositivo",
+   "resolucion": [
+    1080,
+    2400
+   ],
+   "formato": "webp",
+   "color": "#0e3042",
+   "vista": "vistas/distrito-9.webp",
+   "miniatura": "miniaturas/distrito-9.webp",
+   "original": null,
+   "capas": [
+    "capas/distrito-9-0.webp",
+    "capas/distrito-9-1.webp",
+    "capas/distrito-9-2.webp"
+   ]
+  },
+  {
+   "id": "aurora-roja",
+   "nombre": "Aurora Roja",
+   "descripcion": "",
+   "categoria": "cyberpunk",
+   "coleccion": "neon-nocturno",
+   "etiquetas": [
+    "neón",
+    "rojo"
+   ],
+   "acceso": "suscripcion",
+   "precio": 0,
+   "moneda": "USD",
+   "publicado": "2026-09-28",
+   "destacado": false,
+   "autor": "Estudio Muro",
+   "licencia": "Uso personal en un dispositivo",
+   "resolucion": [
+    1080,
+    2400
+   ],
+   "formato": "webp",
+   "color": "#451415",
+   "vista": "vistas/aurora-roja.webp",
+   "miniatura": "miniaturas/aurora-roja.webp",
+   "original": null,
+   "capas": [
+    "capas/aurora-roja-0.webp",
+    "capas/aurora-roja-1.webp",
+    "capas/aurora-roja-2.webp"
+   ]
+  },
+  {
+   "id": "pulso",
+   "nombre": "Pulso",
+   "descripcion": "",
+   "categoria": "cyberpunk",
+   "coleccion": "bienvenida",
+   "etiquetas": [
+    "neón",
+    "violeta"
+   ],
+   "acceso": "gratis",
+   "precio": 0,
+   "moneda": "USD",
+   "publicado": "2026-09-20",
+   "destacado": false,
+   "autor": "Estudio Muro",
+   "licencia": "Uso personal en un dispositivo",
+   "resolucion": [
+    1080,
+    2400
+   ],
+   "formato": "webp",
+   "color": "#24083b",
+   "vista": "vistas/pulso.webp",
+   "miniatura": "miniaturas/pulso.webp",
+   "original": "fondos/pulso.webp",
+   "capas": [
+    "capas/pulso-0.webp",
+    "capas/pulso-1.webp",
+    "capas/pulso-2.webp"
+   ]
+  },
+  {
+   "id": "saturnia",
+   "nombre": "Saturnia",
+   "descripcion": "Un gigante anillado sobre una nebulosa violeta.",
+   "categoria": "espacio",
+   "coleccion": "orbitas",
+   "etiquetas": [
+    "planeta",
+    "anillos"
+   ],
+   "acceso": "premium",
+   "precio": 1.49,
+   "moneda": "USD",
+   "publicado": "2026-10-11",
+   "destacado": true,
+   "autor": "Estudio Muro",
+   "licencia": "Uso personal en un dispositivo",
+   "resolucion": [
+    1080,
+    2400
+   ],
+   "formato": "webp",
+   "color": "#1b2035",
+   "vista": "vistas/saturnia.webp",
+   "miniatura": "miniaturas/saturnia.webp",
+   "original": null,
+   "capas": [
+    "capas/saturnia-0.webp",
+    "capas/saturnia-1.webp",
+    "capas/saturnia-2.webp"
+   ]
+  },
+  {
+   "id": "azul-profundo",
+   "nombre": "Azul Profundo",
+   "descripcion": "",
+   "categoria": "espacio",
+   "coleccion": "orbitas",
+   "etiquetas": [
+    "planeta",
+    "azul"
+   ],
+   "acceso": "gratis",
+   "precio": 0,
+   "moneda": "USD",
+   "publicado": "2026-10-02",
+   "destacado": false,
+   "autor": "Estudio Muro",
+   "licencia": "Uso personal en un dispositivo",
+   "resolucion": [
+    1080,
+    2400
+   ],
+   "formato": "webp",
+   "color": "#0a2e48",
+   "vista": "vistas/azul-profundo.webp",
+   "miniatura": "miniaturas/azul-profundo.webp",
+   "original": "fondos/azul-profundo.webp",
+   "capas": [
+    "capas/azul-profundo-0.webp",
+    "capas/azul-profundo-1.webp",
+    "capas/azul-profundo-2.webp"
+   ]
+  },
+  {
+   "id": "ceniza-estelar",
+   "nombre": "Ceniza Estelar",
+   "descripcion": "",
+   "categoria": "espacio",
+   "coleccion": "orbitas",
+   "etiquetas": [
+    "planeta",
+    "naranja"
+   ],
+   "acceso": "suscripcion",
+   "precio": 0,
+   "moneda": "USD",
+   "publicado": "2026-09-25",
+   "destacado": false,
+   "autor": "Estudio Muro",
+   "licencia": "Uso personal en un dispositivo",
+   "resolucion": [
+    1080,
+    2400
+   ],
+   "formato": "webp",
+   "color": "#3b2112",
+   "vista": "vistas/ceniza-estelar.webp",
+   "miniatura": "miniaturas/ceniza-estelar.webp",
+   "original": null,
+   "capas": [
+    "capas/ceniza-estelar-0.webp",
+    "capas/ceniza-estelar-1.webp",
+    "capas/ceniza-estelar-2.webp"
+   ]
+  },
+  {
+   "id": "eclipse",
+   "nombre": "Eclipse",
+   "descripcion": "",
+   "categoria": "espacio",
+   "coleccion": "orbitas",
+   "etiquetas": [
+    "oscuro",
+    "planeta"
+   ],
+   "acceso": "premium",
+   "precio": 0.99,
+   "moneda": "USD",
+   "publicado": "2026-09-18",
+   "destacado": false,
+   "autor": "Estudio Muro",
+   "licencia": "Uso personal en un dispositivo",
+   "resolucion": [
+    1080,
+    2400
+   ],
+   "formato": "webp",
+   "color": "#12111d",
+   "vista": "vistas/eclipse.webp",
+   "miniatura": "miniaturas/eclipse.webp",
+   "original": null,
+   "capas": [
+    "capas/eclipse-0.webp",
+    "capas/eclipse-1.webp",
+    "capas/eclipse-2.webp"
+   ]
+  },
+  {
+   "id": "cumbres",
+   "nombre": "Cumbres",
+   "descripcion": "Amanecer entre crestas, con niebla entre los valles.",
+   "categoria": "naturaleza",
+   "coleccion": "cumbres",
+   "etiquetas": [
+    "montaña",
+    "amanecer"
+   ],
+   "acceso": "gratis",
+   "precio": 0,
+   "moneda": "USD",
+   "publicado": "2026-10-09",
+   "destacado": true,
+   "autor": "Estudio Muro",
+   "licencia": "Uso personal en un dispositivo",
+   "resolucion": [
+    1080,
+    2400
+   ],
+   "formato": "webp",
+   "color": "#b2a098",
+   "vista": "vistas/cumbres.webp",
+   "miniatura": "miniaturas/cumbres.webp",
+   "original": "fondos/cumbres.webp",
+   "capas": [
+    "capas/cumbres-0.webp",
+    "capas/cumbres-1.webp",
+    "capas/cumbres-2.webp"
+   ]
+  },
+  {
+   "id": "bosque-boreal",
+   "nombre": "Bosque Boreal",
+   "descripcion": "",
+   "categoria": "naturaleza",
+   "coleccion": "cumbres",
+   "etiquetas": [
+    "bosque",
+    "pinos"
+   ],
+   "acceso": "gratis",
+   "precio": 0,
+   "moneda": "USD",
+   "publicado": "2026-10-05",
+   "destacado": false,
+   "autor": "Estudio Muro",
+   "licencia": "Uso personal en un dispositivo",
+   "resolucion": [
+    1080,
+    2400
+   ],
+   "formato": "webp",
+   "color": "#92b1af",
+   "vista": "vistas/bosque-boreal.webp",
+   "miniatura": "miniaturas/bosque-boreal.webp",
+   "original": "fondos/bosque-boreal.webp",
+   "capas": [
+    "capas/bosque-boreal-0.webp",
+    "capas/bosque-boreal-1.webp",
+    "capas/bosque-boreal-2.webp"
+   ]
+  },
+  {
+   "id": "valle-lila",
+   "nombre": "Valle Lila",
+   "descripcion": "",
+   "categoria": "naturaleza",
+   "coleccion": "cumbres",
+   "etiquetas": [
+    "montaña",
+    "crepúsculo"
+   ],
+   "acceso": "premium",
+   "precio": 1.49,
+   "moneda": "USD",
+   "publicado": "2026-09-30",
+   "destacado": false,
+   "autor": "Estudio Muro",
+   "licencia": "Uso personal en un dispositivo",
+   "resolucion": [
+    1080,
+    2400
+   ],
+   "formato": "webp",
+   "color": "#765c83",
+   "vista": "vistas/valle-lila.webp",
+   "miniatura": "miniaturas/valle-lila.webp",
+   "original": null,
+   "capas": [
+    "capas/valle-lila-0.webp",
+    "capas/valle-lila-1.webp",
+    "capas/valle-lila-2.webp"
+   ]
+  },
+  {
+   "id": "niebla",
+   "nombre": "Niebla",
+   "descripcion": "",
+   "categoria": "naturaleza",
+   "coleccion": "cumbres",
+   "etiquetas": [
+    "niebla",
+    "gris"
+   ],
+   "acceso": "suscripcion",
+   "precio": 0,
+   "moneda": "USD",
+   "publicado": "2026-09-22",
+   "destacado": false,
+   "autor": "Estudio Muro",
+   "licencia": "Uso personal en un dispositivo",
+   "resolucion": [
+    1080,
+    2400
+   ],
+   "formato": "webp",
+   "color": "#b0b6b7",
+   "vista": "vistas/niebla.webp",
+   "miniatura": "miniaturas/niebla.webp",
+   "original": null,
+   "capas": [
+    "capas/niebla-0.webp",
+    "capas/niebla-1.webp",
+    "capas/niebla-2.webp"
+   ]
+  },
+  {
+   "id": "ocaso",
+   "nombre": "Ocaso",
+   "descripcion": "El último minuto de sol sobre el mar, con acantilado en primer plano.",
+   "categoria": "cinematico",
+   "coleccion": "horizontes",
+   "etiquetas": [
+    "mar",
+    "atardecer"
+   ],
+   "acceso": "premium",
+   "precio": 2.49,
+   "moneda": "USD",
+   "publicado": "2026-10-12",
+   "destacado": true,
+   "autor": "Estudio Muro",
+   "licencia": "Uso personal en un dispositivo",
+   "resolucion": [
+    1080,
+    2400
+   ],
+   "formato": "webp",
+   "color": "#5d3444",
+   "vista": "vistas/ocaso.webp",
+   "miniatura": "miniaturas/ocaso.webp",
+   "original": null,
+   "capas": [
+    "capas/ocaso-0.webp",
+    "capas/ocaso-1.webp",
+    "capas/ocaso-2.webp"
+   ]
+  },
+  {
+   "id": "costa-azul",
+   "nombre": "Costa Azul",
+   "descripcion": "",
+   "categoria": "cinematico",
+   "coleccion": "horizontes",
+   "etiquetas": [
+    "mar",
+    "azul"
+   ],
+   "acceso": "gratis",
+   "precio": 0,
+   "moneda": "USD",
+   "publicado": "2026-10-03",
+   "destacado": false,
+   "autor": "Estudio Muro",
+   "licencia": "Uso personal en un dispositivo",
+   "resolucion": [
+    1080,
+    2400
+   ],
+   "formato": "webp",
+   "color": "#3e5465",
+   "vista": "vistas/costa-azul.webp",
+   "miniatura": "miniaturas/costa-azul.webp",
+   "original": "fondos/costa-azul.webp",
+   "capas": [
+    "capas/costa-azul-0.webp",
+    "capas/costa-azul-1.webp",
+    "capas/costa-azul-2.webp"
+   ]
+  },
+  {
+   "id": "brasas",
+   "nombre": "Brasas",
+   "descripcion": "",
+   "categoria": "cinematico",
+   "coleccion": "horizontes",
+   "etiquetas": [
+    "fuego",
+    "mar"
+   ],
+   "acceso": "suscripcion",
+   "precio": 0,
+   "moneda": "USD",
+   "publicado": "2026-09-27",
+   "destacado": false,
+   "autor": "Estudio Muro",
+   "licencia": "Uso personal en un dispositivo",
+   "resolucion": [
+    1080,
+    2400
+   ],
+   "formato": "webp",
+   "color": "#471d10",
+   "vista": "vistas/brasas.webp",
+   "miniatura": "miniaturas/brasas.webp",
+   "original": null,
+   "capas": [
+    "capas/brasas-0.webp",
+    "capas/brasas-1.webp",
+    "capas/brasas-2.webp"
+   ]
+  },
+  {
+   "id": "marfil",
+   "nombre": "Marfil",
+   "descripcion": "",
+   "categoria": "cinematico",
+   "coleccion": "horizontes",
+   "etiquetas": [
+    "claro",
+    "mar"
+   ],
+   "acceso": "premium",
+   "precio": 1.49,
+   "moneda": "USD",
+   "publicado": "2026-09-15",
+   "destacado": false,
+   "autor": "Estudio Muro",
+   "licencia": "Uso personal en un dispositivo",
+   "resolucion": [
+    1080,
+    2400
+   ],
+   "formato": "webp",
+   "color": "#a59f95",
+   "vista": "vistas/marfil.webp",
+   "miniatura": "miniaturas/marfil.webp",
+   "original": null,
+   "capas": [
+    "capas/marfil-0.webp",
+    "capas/marfil-1.webp",
+    "capas/marfil-2.webp"
+   ]
+  },
+  {
+   "id": "claustro",
+   "nombre": "Claustro",
+   "descripcion": "Ocho arcos hacia la luz. Simetría y profundidad.",
+   "categoria": "arquitectura",
+   "coleccion": "geometria",
+   "etiquetas": [
+    "arcos",
+    "perspectiva"
+   ],
+   "acceso": "premium",
+   "precio": 1.99,
+   "moneda": "USD",
+   "publicado": "2026-10-07",
+   "destacado": true,
+   "autor": "Estudio Muro",
+   "licencia": "Uso personal en un dispositivo",
+   "resolucion": [
+    1080,
+    2400
+   ],
+   "formato": "webp",
+   "color": "#6f5a47",
+   "vista": "vistas/claustro.webp",
+   "miniatura": "miniaturas/claustro.webp",
+   "original": null,
+   "capas": [
+    "capas/claustro-0.webp",
+    "capas/claustro-1.webp",
+    "capas/claustro-2.webp"
+   ]
+  },
+  {
+   "id": "galeria-blanca",
+   "nombre": "Galería Blanca",
+   "descripcion": "",
+   "categoria": "arquitectura",
+   "coleccion": "geometria",
+   "etiquetas": [
+    "blanco",
+    "arcos"
+   ],
+   "acceso": "gratis",
+   "precio": 0,
+   "moneda": "USD",
+   "publicado": "2026-10-04",
+   "destacado": false,
+   "autor": "Estudio Muro",
+   "licencia": "Uso personal en un dispositivo",
+   "resolucion": [
+    1080,
+    2400
+   ],
+   "formato": "webp",
+   "color": "#939a9f",
+   "vista": "vistas/galeria-blanca.webp",
+   "miniatura": "miniaturas/galeria-blanca.webp",
+   "original": "fondos/galeria-blanca.webp",
+   "capas": [
+    "capas/galeria-blanca-0.webp",
+    "capas/galeria-blanca-1.webp",
+    "capas/galeria-blanca-2.webp"
+   ]
+  },
+  {
+   "id": "terracota-arq",
+   "nombre": "Terracota",
+   "descripcion": "",
+   "categoria": "arquitectura",
+   "coleccion": "geometria",
+   "etiquetas": [
+    "cálido",
+    "arcos"
+   ],
+   "acceso": "suscripcion",
+   "precio": 0,
+   "moneda": "USD",
+   "publicado": "2026-09-24",
+   "destacado": false,
+   "autor": "Estudio Muro",
+   "licencia": "Uso personal en un dispositivo",
+   "resolucion": [
+    1080,
+    2400
+   ],
+   "formato": "webp",
+   "color": "#6f3521",
+   "vista": "vistas/terracota-arq.webp",
+   "miniatura": "miniaturas/terracota-arq.webp",
+   "original": null,
+   "capas": [
+    "capas/terracota-arq-0.webp",
+    "capas/terracota-arq-1.webp",
+    "capas/terracota-arq-2.webp"
+   ]
+  },
+  {
+   "id": "nocturno",
+   "nombre": "Nocturno",
+   "descripcion": "",
+   "categoria": "arquitectura",
+   "coleccion": "geometria",
+   "etiquetas": [
+    "noche",
+    "azul"
+   ],
+   "acceso": "premium",
+   "precio": 1.49,
+   "moneda": "USD",
+   "publicado": "2026-09-16",
+   "destacado": false,
+   "autor": "Estudio Muro",
+   "licencia": "Uso personal en un dispositivo",
+   "resolucion": [
+    1080,
+    2400
+   ],
+   "formato": "webp",
+   "color": "#101824",
+   "vista": "vistas/nocturno.webp",
+   "miniatura": "miniaturas/nocturno.webp",
+   "original": null,
+   "capas": [
+    "capas/nocturno-0.webp",
+    "capas/nocturno-1.webp",
+    "capas/nocturno-2.webp"
+   ]
+  },
+  {
+   "id": "oro-negro",
+   "nombre": "Oro Negro",
+   "descripcion": "Anillos de oro sobre grafito. Contención absoluta.",
+   "categoria": "lujo",
+   "coleccion": "oro-negro",
+   "etiquetas": [
+    "oro",
+    "negro"
+   ],
+   "acceso": "premium",
+   "precio": 2.99,
+   "moneda": "USD",
+   "publicado": "2026-10-06",
+   "destacado": true,
+   "autor": "Estudio Muro",
+   "licencia": "Uso personal en un dispositivo",
+   "resolucion": [
+    1080,
+    2400
+   ],
+   "formato": "webp",
+   "color": "#141313",
+   "vista": "vistas/oro-negro.webp",
+   "miniatura": "miniaturas/oro-negro.webp",
+   "original": null,
+   "capas": []
+  },
+  {
+   "id": "champan",
+   "nombre": "Champán",
+   "descripcion": "",
+   "categoria": "lujo",
+   "coleccion": "oro-negro",
+   "etiquetas": [
+    "champán"
+   ],
+   "acceso": "premium",
+   "precio": 2.49,
+   "moneda": "USD",
+   "publicado": "2026-09-29",
+   "destacado": false,
+   "autor": "Estudio Muro",
+   "licencia": "Uso personal en un dispositivo",
+   "resolucion": [
+    1080,
+    2400
+   ],
+   "formato": "webp",
+   "color": "#1d1b17",
+   "vista": "vistas/champan.webp",
+   "miniatura": "miniaturas/champan.webp",
+   "original": null,
+   "capas": []
+  },
+  {
+   "id": "platino",
+   "nombre": "Platino",
+   "descripcion": "",
+   "categoria": "lujo",
+   "coleccion": "oro-negro",
+   "etiquetas": [
+    "plata"
+   ],
+   "acceso": "suscripcion",
+   "precio": 0,
+   "moneda": "USD",
+   "publicado": "2026-09-21",
+   "destacado": false,
+   "autor": "Estudio Muro",
+   "licencia": "Uso personal en un dispositivo",
+   "resolucion": [
+    1080,
+    2400
+   ],
+   "formato": "webp",
+   "color": "#161618",
+   "vista": "vistas/platino.webp",
+   "miniatura": "miniaturas/platino.webp",
+   "original": null,
+   "capas": []
+  },
+  {
+   "id": "rose",
+   "nombre": "Rosé",
+   "descripcion": "",
+   "categoria": "lujo",
+   "coleccion": "bienvenida",
+   "etiquetas": [
+    "rosa",
+    "oro"
+   ],
+   "acceso": "gratis",
+   "precio": 0,
+   "moneda": "USD",
+   "publicado": "2026-09-19",
+   "destacado": false,
+   "autor": "Estudio Muro",
+   "licencia": "Uso personal en un dispositivo",
+   "resolucion": [
+    1080,
+    2400
+   ],
+   "formato": "webp",
+   "color": "#191213",
+   "vista": "vistas/rose.webp",
+   "miniatura": "miniaturas/rose.webp",
+   "original": "fondos/rose.webp",
+   "capas": []
+  },
+  {
+   "id": "fluido",
+   "nombre": "Fluido",
+   "descripcion": "",
+   "categoria": "abstracto",
+   "coleccion": "bienvenida",
+   "etiquetas": [
+    "color",
+    "formas"
+   ],
+   "acceso": "gratis",
+   "precio": 0,
+   "moneda": "USD",
+   "publicado": "2026-10-01",
+   "destacado": false,
+   "autor": "Estudio Muro",
+   "licencia": "Uso personal en un dispositivo",
+   "resolucion": [
+    1080,
+    2400
+   ],
+   "formato": "webp",
+   "color": "#5c495f",
+   "vista": "vistas/fluido.webp",
+   "miniatura": "miniaturas/fluido.webp",
+   "original": "fondos/fluido.webp",
+   "capas": []
+  },
+  {
+   "id": "lava",
+   "nombre": "Lava",
+   "descripcion": "",
+   "categoria": "abstracto",
+   "coleccion": null,
+   "etiquetas": [
+    "cálido",
+    "formas"
+   ],
+   "acceso": "premium",
+   "precio": 0.99,
+   "moneda": "USD",
+   "publicado": "2026-09-26",
+   "destacado": false,
+   "autor": "Estudio Muro",
+   "licencia": "Uso personal en un dispositivo",
+   "resolucion": [
+    1080,
+    2400
+   ],
+   "formato": "webp",
+   "color": "#793319",
+   "vista": "vistas/lava.webp",
+   "miniatura": "miniaturas/lava.webp",
+   "original": null,
+   "capas": []
+  },
+  {
+   "id": "laguna",
+   "nombre": "Laguna",
+   "descripcion": "",
+   "categoria": "abstracto",
+   "coleccion": null,
+   "etiquetas": [
+    "frío",
+    "formas"
+   ],
+   "acceso": "suscripcion",
+   "precio": 0,
+   "moneda": "USD",
+   "publicado": "2026-09-23",
+   "destacado": false,
+   "autor": "Estudio Muro",
+   "licencia": "Uso personal en un dispositivo",
+   "resolucion": [
+    1080,
+    2400
+   ],
+   "formato": "webp",
+   "color": "#1e5a63",
+   "vista": "vistas/laguna.webp",
+   "miniatura": "miniaturas/laguna.webp",
+   "original": null,
+   "capas": []
+  },
+  {
+   "id": "pastel",
+   "nombre": "Pastel",
+   "descripcion": "",
+   "categoria": "abstracto",
+   "coleccion": null,
+   "etiquetas": [
+    "pastel",
+    "claro"
+   ],
+   "acceso": "gratis",
+   "precio": 0,
+   "moneda": "USD",
+   "publicado": "2026-09-17",
+   "destacado": false,
+   "autor": "Estudio Muro",
+   "licencia": "Uso personal en un dispositivo",
+   "resolucion": [
+    1080,
+    2400
+   ],
+   "formato": "webp",
+   "color": "#e7dee0",
+   "vista": "vistas/pastel.webp",
+   "miniatura": "miniaturas/pastel.webp",
+   "original": "fondos/pastel.webp",
+   "capas": []
+  },
+  {
+   "id": "umbral",
+   "nombre": "Umbral",
+   "descripcion": "",
+   "categoria": "oscuro",
+   "coleccion": "bienvenida",
+   "etiquetas": [
+    "negro",
+    "luz"
+   ],
+   "acceso": "gratis",
+   "precio": 0,
+   "moneda": "USD",
+   "publicado": "2026-10-02",
+   "destacado": false,
+   "autor": "Estudio Muro",
+   "licencia": "Uso personal en un dispositivo",
+   "resolucion": [
+    1080,
+    2400
+   ],
+   "formato": "webp",
+   "color": "#303139",
+   "vista": "vistas/umbral.webp",
+   "miniatura": "miniaturas/umbral.webp",
+   "original": "fondos/umbral.webp",
+   "capas": []
+  },
+  {
+   "id": "ambar",
+   "nombre": "Ámbar",
+   "descripcion": "",
+   "categoria": "oscuro",
+   "coleccion": null,
+   "etiquetas": [
+    "negro",
+    "ámbar"
+   ],
+   "acceso": "premium",
+   "precio": 0.99,
+   "moneda": "USD",
+   "publicado": "2026-09-25",
+   "destacado": false,
+   "autor": "Estudio Muro",
+   "licencia": "Uso personal en un dispositivo",
+   "resolucion": [
+    1080,
+    2400
+   ],
+   "formato": "webp",
+   "color": "#372611",
+   "vista": "vistas/ambar.webp",
+   "miniatura": "miniaturas/ambar.webp",
+   "original": null,
+   "capas": []
+  },
+  {
+   "id": "menta-noche",
+   "nombre": "Menta Noche",
+   "descripcion": "",
+   "categoria": "oscuro",
+   "coleccion": null,
+   "etiquetas": [
+    "negro",
+    "verde"
+   ],
+   "acceso": "suscripcion",
+   "precio": 0,
+   "moneda": "USD",
+   "publicado": "2026-09-20",
+   "destacado": false,
+   "autor": "Estudio Muro",
+   "licencia": "Uso personal en un dispositivo",
+   "resolucion": [
+    1080,
+    2400
+   ],
+   "formato": "webp",
+   "color": "#193229",
+   "vista": "vistas/menta-noche.webp",
+   "miniatura": "miniaturas/menta-noche.webp",
+   "original": null,
+   "capas": []
+  },
+  {
+   "id": "brasa-fria",
+   "nombre": "Brasa Fría",
+   "descripcion": "",
+   "categoria": "oscuro",
+   "coleccion": null,
+   "etiquetas": [
+    "negro",
+    "rojo"
+   ],
+   "acceso": "gratis",
+   "precio": 0,
+   "moneda": "USD",
+   "publicado": "2026-09-14",
+   "destacado": false,
+   "autor": "Estudio Muro",
+   "licencia": "Uso personal en un dispositivo",
+   "resolucion": [
+    1080,
+    2400
+   ],
+   "formato": "webp",
+   "color": "#371118",
+   "vista": "vistas/brasa-fria.webp",
+   "miniatura": "miniaturas/brasa-fria.webp",
+   "original": "fondos/brasa-fria.webp",
+   "capas": []
+  },
+  {
+   "id": "brasa-min",
+   "nombre": "Brasa",
+   "descripcion": "",
+   "categoria": "minimal",
+   "coleccion": "bienvenida",
+   "etiquetas": [
+    "sol",
+    "claro"
+   ],
+   "acceso": "gratis",
+   "precio": 0,
+   "moneda": "USD",
+   "publicado": "2026-09-12",
+   "destacado": false,
+   "autor": "Estudio Muro",
+   "licencia": "Uso personal en un dispositivo",
+   "resolucion": [
+    1080,
+    2400
+   ],
+   "formato": "webp",
+   "color": "#9d8c89",
+   "vista": "vistas/brasa-min.webp",
+   "miniatura": "miniaturas/brasa-min.webp",
+   "original": "fondos/brasa-min.webp",
+   "capas": []
+  },
+  {
+   "id": "marea",
+   "nombre": "Marea",
+   "descripcion": "",
+   "categoria": "minimal",
+   "coleccion": null,
+   "etiquetas": [
+    "ondas",
+    "azul"
+   ],
+   "acceso": "gratis",
+   "precio": 0,
+   "moneda": "USD",
+   "publicado": "2026-09-11",
+   "destacado": false,
+   "autor": "Estudio Muro",
+   "licencia": "Uso personal en un dispositivo",
+   "resolucion": [
+    1080,
+    2400
+   ],
+   "formato": "webp",
+   "color": "#88b0c2",
+   "vista": "vistas/marea.webp",
+   "miniatura": "miniaturas/marea.webp",
+   "original": "fondos/marea.webp",
+   "capas": []
+  },
+  {
+   "id": "bauhaus",
+   "nombre": "Bauhaus",
+   "descripcion": "",
+   "categoria": "minimal",
+   "coleccion": null,
+   "etiquetas": [
+    "arcos",
+    "color"
+   ],
+   "acceso": "premium",
+   "precio": 0.99,
+   "moneda": "USD",
+   "publicado": "2026-09-10",
+   "destacado": false,
+   "autor": "Estudio Muro",
+   "licencia": "Uso personal en un dispositivo",
+   "resolucion": [
+    1080,
+    2400
+   ],
+   "formato": "webp",
+   "color": "#dedad2",
+   "vista": "vistas/bauhaus.webp",
+   "miniatura": "miniaturas/bauhaus.webp",
+   "original": null,
+   "capas": []
+  },
+  {
+   "id": "sahara",
+   "nombre": "Sahara",
+   "descripcion": "",
+   "categoria": "minimal",
+   "coleccion": null,
+   "etiquetas": [
+    "dunas"
+   ],
+   "acceso": "suscripcion",
+   "precio": 0,
+   "moneda": "USD",
+   "publicado": "2026-09-09",
+   "destacado": false,
+   "autor": "Estudio Muro",
+   "licencia": "Uso personal en un dispositivo",
+   "resolucion": [
+    1080,
+    2400
+   ],
+   "formato": "webp",
+   "color": "#e3c2a1",
+   "vista": "vistas/sahara.webp",
+   "miniatura": "miniaturas/sahara.webp",
+   "original": null,
+   "capas": []
+  },
+  {
+   "id": "orbita-cero",
+   "nombre": "Órbita Cero",
+   "descripcion": "",
+   "categoria": "espacio",
+   "coleccion": "lanzamiento-noviembre",
+   "etiquetas": [
+    "planeta",
+    "rosa"
+   ],
+   "acceso": "premium",
+   "precio": 1.99,
+   "moneda": "USD",
+   "publicado": "2026-11-01",
+   "destacado": false,
+   "autor": "Estudio Muro",
+   "licencia": "Uso personal en un dispositivo",
+   "resolucion": [
+    1080,
+    2400
+   ],
+   "formato": "webp",
+   "color": "#2b1433",
+   "vista": "vistas/orbita-cero.webp",
+   "miniatura": "miniaturas/orbita-cero.webp",
+   "original": null,
+   "capas": [
+    "capas/orbita-cero-0.webp",
+    "capas/orbita-cero-1.webp",
+    "capas/orbita-cero-2.webp"
+   ]
+  },
+  {
+   "id": "ciudad-lluvia",
+   "nombre": "Ciudad Lluvia",
+   "descripcion": "",
+   "categoria": "cyberpunk",
+   "coleccion": "lanzamiento-noviembre",
+   "etiquetas": [
+    "lluvia",
+    "neón"
+   ],
+   "acceso": "premium",
+   "precio": 1.99,
+   "moneda": "USD",
+   "publicado": "2026-11-01",
+   "destacado": false,
+   "autor": "Estudio Muro",
+   "licencia": "Uso personal en un dispositivo",
+   "resolucion": [
+    1080,
+    2400
+   ],
+   "formato": "webp",
+   "color": "#192a3a",
+   "vista": "vistas/ciudad-lluvia.webp",
+   "miniatura": "miniaturas/ciudad-lluvia.webp",
+   "original": null,
+   "capas": [
+    "capas/ciudad-lluvia-0.webp",
+    "capas/ciudad-lluvia-1.webp",
+    "capas/ciudad-lluvia-2.webp"
+   ]
+  }
+ ]
+}
