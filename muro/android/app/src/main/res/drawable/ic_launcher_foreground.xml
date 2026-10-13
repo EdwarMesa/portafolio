@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Sol sobre el horizonte: el fondo "Brasa" del catálogo, reducido a su forma. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <path
+        android:fillColor="#D9572B"
+        android:pathData="M39,56 A15,15 0 1,1 69,56 Z" />
+    <path
+        android:fillColor="#141414"
+        android:pathData="M33,58 H75 V66 A6,6 0 0,1 69,72 H39 A6,6 0 0,1 33,66 Z" />
+</vector>
